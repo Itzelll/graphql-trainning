@@ -1,6 +1,6 @@
 build:
-  adsoftsito:
-    image: okteto.dev/graphql-adsoftsito:latest
+  itzelll:
+    image: okteto.dev/graphql-itzelll:latest
 
 deploy:
   - okteto build # build the image with the latest code

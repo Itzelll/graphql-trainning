@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-itzelll
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: graphql-adsoftsito
+      app: graphql-itzelll
   template:
     metadata:
       labels:
-        app: graphql-adsoftsito
+        app: graphql-itzelll
     spec:
       containers:
-      - image: okteto.dev/graphql-adsoftsito:latest
-        name: adsoftsito
-        envFrom:
-        - configMapRef:
-            name: adsoftsito-config
+      - image: okteto.dev/graphql-itzelll:latest
+        name: itzelll
+        #envFrom:
+        #- configMapRef:
+        #    name: itzelll-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-itzelll
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "graphql-adsoftsito"
+  - name: "graphql-itzelll"
     port: 8080
   selector:
-    app: graphql-adsoftsito
+    app: graphql-itzelll
